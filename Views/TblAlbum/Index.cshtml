@@ -1,0 +1,66 @@
+@model IEnumerable<ProjeKlasoru.Models.TblAlbum>
+
+@{
+    ViewData["Title"] = "Album List";
+}
+
+<h1>Album List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Album_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album_Tur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sanatci_bilgi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album_Adi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album_Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yerli)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album_No)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album_Tur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sanatci_bilgi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album_Adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album_Fiyat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yerli)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Album_Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Album_Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Album_Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

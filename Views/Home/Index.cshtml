@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjeKlasoru.Models.TblAlbum>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>Album List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Album No</th>
+            <th>Album Adi</th>
+            <th>Sanatci Bilgi</th>
+            <th>Album Tur</th>
+            <th>Album Fiyat</th>
+            <th>Yerli</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td>@album.Album_No</td>
+                <td>@album.Album_Adi</td>
+                <td>@album.Sanatci_bilgi</td>
+                <td>@album.Album_Tur</td>
+                <td>@album.Album_Fiyat</td>
+                <td>@album.yerli</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,54 @@
+@model ProjeKlasoru.Models.TblAlbum
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TblAlbum</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Album No
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Album_No
+        </dd>
+        <dt class="col-sm-2">
+            Album Tur
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Album_Tur
+        </dd>
+        <dt class="col-sm-2">
+            Sanatci Bilgi
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Sanatci_bilgi
+        </dd>
+        <dt class="col-sm-2">
+            Album Adi
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Album_Adi
+        </dd>
+        <dt class="col-sm-2">
+            Album Fiyat
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Album_Fiyat
+        </dd>
+        <dt class="col-sm-2">
+            Yerli
+        </dt>
+        <dd class="col-sm-10">
+            @Model.yerli
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

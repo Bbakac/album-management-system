@@ -1,0 +1,63 @@
+@model ProjeKlasoru.Models.TblAlbum
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TblAlbum</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Album_Id" />
+            <div class="form-group">
+                <label asp-for="Album_No" class="control-label"></label>
+                <input asp-for="Album_No" class="form-control" />
+                <span asp-validation-for="Album_No" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Album_Tur" class="control-label"></label>
+                <input asp-for="Album_Tur" class="form-control" />
+                <span asp-validation-for="Album_Tur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sanatci_bilgi" class="control-label"></label>
+                <input asp-for="Sanatci_bilgi" class="form-control" />
+                <span asp-validation-for="Sanatci_bilgi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Album_Adi" class="control-label"></label>
+                <input asp-for="Album_Adi" class="form-control" />
+                <span asp-validation-for="Album_Adi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Album_Fiyat" class="control-label"></label>
+                <input asp-for="Album_Fiyat" class="form-control" />
+                <span asp-validation-for="Album_Fiyat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="yerli" class="control-label"></label>
+                <input asp-for="yerli" type="checkbox" class="form-check-input" />
+                <span asp-validation-for="yerli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="MenajerBilgisi" class="control-label">Menajer Bilgisi</label>
+                <input id="MenajerBilgisi" name="MenajerBilgisi" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

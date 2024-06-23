@@ -4,7 +4,7 @@ An Album Management System built using ASP.NET Core MVC and Entity Framework Cor
 
 ## Features
 
-- Create new albums with details including album number, type, artist information, album name, price, and whether it's local (`yerli`).
+- Create new albums with details including album number, type, artist information, album name, price, and whether it's local.
 - Edit existing albums and update all fields.
 - View a list of all albums.
 - Delete albums.
